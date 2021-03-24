@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ManagementUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,10 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
+    Route::get('/', function () {
+        return view('welcome');
+    });
+   */ 
+//Route::get('user', 'ManagementUserController@index');
+//Route::resource('user', 'ManagementUserController');
+Route::get('user', [ManagementUserController::class, 'index']);
 
-Route::get('/', function () {
-    return view('welcome');
-
-Route::get('user', 'ManagementUserCotroller@index');
-});
 
