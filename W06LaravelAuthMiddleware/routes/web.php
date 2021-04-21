@@ -27,6 +27,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+/*
 
 Route::get('admin/profile', function(){
     //
@@ -55,3 +56,4 @@ Route::middleware(['web', 'subscribed'])->group(function(){
 Route::put('post/{id}', function ($id){
     //
 })->middleware('role:editor');
+*/
