@@ -31,3 +31,7 @@ Route::get('user/{id}', [ManagementUserController::class, 'show']);
 Route::get('user/{id}', [ManagementUserController::class, 'edit']);
 Route::get('user/{id}', [ManagementUserController::class, 'update']);
 Route::get('user/{id}', [ManagementUserController::class, 'destroy']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
