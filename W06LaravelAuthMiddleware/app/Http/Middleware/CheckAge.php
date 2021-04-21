@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
+namespace Illuminate\Session\Middleware;
 
 use Closure;
 
@@ -38,5 +39,29 @@ class AfterMiddleware
         $response = $next($request);
 
         return $response;
+    }
+}
+
+class CheckRole
+{
+    public function handle($request, Closure $next, $role)
+    {
+        if(! $request->user()->hasRole($role)){
+            //
+        }
+        return $next($request);
+    }
+}
+
+class StartSession
+{
+    public function handle($request, Closure $next)
+    {
+        return $next($request);
+    }
+
+    public function terminate($request, $response)
+    {
+        //
     }
 }
