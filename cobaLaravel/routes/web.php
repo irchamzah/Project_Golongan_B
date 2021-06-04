@@ -25,3 +25,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\PagesController@home');
 
 Route::get('/about', 'App\Http\Controllers\PagesController@about');
+
+Route::get('/mahasiswa', 'App\Http\Controllers\MahasiswaController@index');
