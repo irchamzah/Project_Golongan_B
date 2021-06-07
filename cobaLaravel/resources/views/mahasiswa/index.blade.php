@@ -22,11 +22,11 @@
                 <tbody>
                     @foreach($mahasiswa as $mhs)
                     <tr>
-                        <th scope="row">1</th>
-                        <td scope="row">{{ $mhs->nama }}</td>
-                        <td scope="row">{{ $mhs->nrp }}</td>
-                        <td scope="row">{{ $mhs->email }}</td>
-                        <td scope="row">{{ $mhs->jurusan }}</td>
+                        <th scope="row">{{ $loop->iteration }}</th>
+                        <td>{{ $mhs->nama }}</td>
+                        <td>{{ $mhs->nrp }}</td>
+                        <td>{{ $mhs->email }}</td>
+                        <td>{{ $mhs->jurusan }}</td>
                         <td >
                             <a href="" class="badge bg-success">edit</a>
                             <a href="" class="badge bg-danger">delete</a>
