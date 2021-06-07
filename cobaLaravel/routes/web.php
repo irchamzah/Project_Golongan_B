@@ -33,4 +33,6 @@ Route::get('/students/create', 'App\Http\Controllers\StudentsController@create')
 Route::get('/students/{student}', 'App\Http\Controllers\StudentsController@show');
 Route::post('/students', 'App\Http\Controllers\StudentsController@store');
 Route::delete('/students/{student}', 'App\Http\Controllers\StudentsController@destroy');
+Route::get('/students/{student}/edit', 'App\Http\Controllers\StudentsController@edit');
+Route::patch('/students/{student}', 'App\Http\Controllers\StudentsController@update');
 
