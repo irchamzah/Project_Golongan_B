@@ -14,7 +14,7 @@
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ $student->nama }}</h5>
-                    <p class="card-text">{{ $student->nrp }}</p>
+                    <p class="card-text">{{ $student->nrp } }</p>
                     <p class="card-text">{{ $student->email }}</p>
                     <p class="card-text">{{ $student->jurusan }}</p>
 
